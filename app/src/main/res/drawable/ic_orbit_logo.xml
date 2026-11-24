@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    A planet-style launcher logo: a small "moon" orbiting a larger planet,
+    drawn entirely with vector path data so it scales crisply at any density.
+-->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+
+    <!-- Background: deep space -->
+    <path
+        android:fillColor="#0B0F1F"
+        android:pathData="M0,0h108v108h-108z"/>
+
+    <!-- Subtle outer ring (orbit path) -->
+    <path
+        android:strokeColor="#FFB74D"
+        android:strokeAlpha="0.35"
+        android:strokeWidth="2"
+        android:strokeLineCap="round"
+        android:pathData="M54,18
+                          a36,36 0 1,1 -0.01,0"/>
+
+    <!-- Planet (gradient-filled disc) -->
+    <path
+        android:fillColor="#293F9E"
+        android:pathData="M54,54 m-20,0 a20,20 0 1,1 40,0 a20,20 0 1,1 -40,0"/>
+    <path
+        android:fillColor="#6750A4"
+        android:pathData="M54,54 m-12,0 a12,12 0 1,1 24,0 a12,12 0 1,1 -24,0"/>
+
+    <!-- Small orbiting moon -->
+    <path
+        android:fillColor="#FFB74D"
+        android:pathData="M84,30 m-7,0 a7,7 0 1,1 14,0 a7,7 0 1,1 -14,0"/>
+</vector>

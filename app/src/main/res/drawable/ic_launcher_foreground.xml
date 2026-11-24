@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Foreground layer for the adaptive launcher icon (no background fill — handled by the system). -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+
+    <!-- Orbit path -->
+    <path
+        android:strokeColor="#FFB74D"
+        android:strokeAlpha="0.7"
+        android:strokeWidth="2.5"
+        android:strokeLineCap="round"
+        android:pathData="M54,18 a36,36 0 1,1 -0.01,0"/>
+
+    <!-- Planet body -->
+    <path
+        android:fillColor="#B4BCFF"
+        android:pathData="M54,54 m-22,0 a22,22 0 1,1 44,0 a22,22 0 1,1 -44,0"/>
+
+    <!-- Inner accent -->
+    <path
+        android:fillColor="#6750A4"
+        android:pathData="M54,54 m-12,0 a12,12 0 1,1 24,0 a12,12 0 1,1 -24,0"/>
+
+    <!-- Orbiting moon -->
+    <path
+        android:fillColor="#FFB74D"
+        android:pathData="M86,28 m-7,0 a7,7 0 1,1 14,0 a7,7 0 1,1 -14,0"/>
+</vector>
