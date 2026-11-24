@@ -27,6 +27,7 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.viewmodel.compose.viewModel
 import com.orbit.launcher.data.AppModel
+import com.orbit.launcher.data.PrefsRepository
 import com.orbit.launcher.ui.screens.AppDrawerScreen
 import com.orbit.launcher.ui.screens.HomeScreen
 import com.orbit.launcher.ui.screens.SettingsScreen
@@ -47,8 +48,8 @@ import com.orbit.launcher.ui.viewmodel.LauncherViewModel
 @Composable
 fun OrbitRoot() {
     val vm: LauncherViewModel = viewModel()
-    val themeMode by vm.prefs.themeMode.collectAsState()
-    val accentPreset by vm.prefs.accentPreset.collectAsState()
+    val themeMode by vm.prefs.themeMode.collectAsState(PrefsRepository.ThemeMode.SYSTEM)
+    val accentPreset by vm.prefs.accentPreset.collectAsState(-1)
 
     var showDrawer by remember { mutableStateOf(false) }
     var showSettings by remember { mutableStateOf(false) }

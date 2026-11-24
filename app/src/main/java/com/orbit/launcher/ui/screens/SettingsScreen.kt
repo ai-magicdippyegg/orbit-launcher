@@ -58,13 +58,13 @@ fun SettingsScreen(
     onBack: () -> Unit,
     modifier: Modifier = Modifier,
 ) {
-    val themeMode by vm.prefs.themeMode.collectAsState()
-    val accentPreset by vm.prefs.accentPreset.collectAsState()
-    val use24Hour by vm.prefs.use24Hour.collectAsState()
-    val haptics by vm.prefs.hapticsEnabled.collectAsState()
-    val swipeDownAction by vm.prefs.swipeDownAction.collectAsState()
+    val themeMode by vm.prefs.themeMode.collectAsState(PrefsRepository.ThemeMode.SYSTEM)
+    val accentPreset by vm.prefs.accentPreset.collectAsState(-1)
+    val use24Hour by vm.prefs.use24Hour.collectAsState(false)
+    val haptics by vm.prefs.hapticsEnabled.collectAsState(true)
+    val swipeDownAction by vm.prefs.swipeDownAction.collectAsState(PrefsRepository.SwipeDownAction.NOTIFICATIONS)
     val favorites by vm.favorites.collectAsState()
-    val hiddenApps by vm.prefs.hiddenApps.collectAsState()
+    val hiddenApps by vm.prefs.hiddenApps.collectAsState(emptySet())
     val allApps by vm.allApps.collectAsState()
 
     Scaffold(

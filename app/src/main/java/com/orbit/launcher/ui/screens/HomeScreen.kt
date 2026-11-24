@@ -56,8 +56,8 @@ fun HomeScreen(
 ) {
     val context = LocalContext.current
     val favorites by vm.favorites.collectAsState()
-    val use24Hour by vm.prefs.use24Hour.collectAsState()
-    val swipeDownAction by vm.prefs.swipeDownAction.collectAsState()
+    val use24Hour by vm.prefs.use24Hour.collectAsState(false)
+    val swipeDownAction by vm.prefs.swipeDownAction.collectAsState(com.orbit.launcher.data.PrefsRepository.SwipeDownAction.NOTIFICATIONS)
 
     val gesture = rememberSwipeGestureModifier(
         onSwipeUp = onOpenDrawer,
